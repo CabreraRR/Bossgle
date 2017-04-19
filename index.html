@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" />
+<link rel="stylesheet" href="main.css" />
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bossgle.js"></script>
+<style>
 
+</style>
+</head>
+<body>
+  <div class="container-fluid h-100 d-flex flex-column">
+      <div class="row main">
+          <div class="col-4" style="background-color:lightgrey">
+           <div class="text-center"><h1>BOSSGLE!</h1></div>
+            <footer class="text-center"><cite>Make words by clicking on the letters.</cite></footer>
+             <div class="row">
+              <div class="col-7"><h3>Words:  <span style="color:orange" id="wordCount">0</span></h3></div>
+              <div class="col-5"><h3>Score:  <span style="color:red" id="totalScore">0</span> </h3></div>
+            </div>
+          </div>
+          <div class="col-8 ">
+            <div class="row" style="margin-top:30px">
+              <button type="submit" class="col-3 button btn-primary" onclick="checkGuess()">Submit</button>
+              <h1 class="text-center" style="color:grey">LETTERS</h1>
+              <button type="submit" class="col-3 button btn-danger" onclick="clearGuess()">Clear</button>
+            </div>
+            <div class="flex-center">
+               <div class="row">
+                  <ul class="flex-container flex-center">
+                    <li class="flex-item box box-disabled" id="0">0</li>
+                    <li class="flex-item box" id="1">1</li>
+                    <li class="flex-item box" id="2">2</li>
+                    <li class="flex-item box" id="3">3</li>
+                  </ul>
+               </div>
+               <div class="row">
+                  <ul class="flex-container flex-center">
+                  <li class="flex-item box" id="4">4</li>
+                  <li class="flex-item box" id="5">5</li>
+                  <li class="flex-item box" id="6">6</li>
+                  <li class="flex-item box" id="7">7</li>
+                </ul>
+               </div>
+                 <div class="row">
+                  <ul class="flex-container flex-center">
+                    <li class="flex-item box" id="8">8</li>
+                    <li class="flex-item box" id="9">9</li>
+                    <li class="flex-item box" id="10">10</li>
+                    <li class="flex-item box" id="11">11</li>
+                  </ul>
+               </div>
+                 <div class="row">
+                  <ul class="flex-container flex-center">
+                    <li class="flex-item box" id="12">12</li>
+                    <li class="flex-item box" id="13">13</li>
+                    <li class="flex-item box" id="14">14</li>
+                    <li class="flex-item box" id="15">15</li>
+                  </ul>
+               </div>
+        </div>
+               <div class="text-center"><h3>Time Left: <span id="time-left">60</span></h3></div>
+                <div class="text-center"><button class="button color:black" id="clear" onclick="resetGame()">Reset Board</button></div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>
