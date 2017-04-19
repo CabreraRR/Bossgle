@@ -3,7 +3,9 @@
 <head>
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" />
 <link rel="stylesheet" href="main.css" />
-<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/jquery/dist/jquery.js">
+</script>
+<script src="https://cdn.rawgit.com/tannerwelsh/dcd33611c1bc615fd5a1c8cadc05d1b2/raw/470cde9d72927fef717f354b3ba3718a0aaabb99/basicWords.js" charset="utf-8"></script>
 <script src="bossgle.js"></script>
 <style>
 
@@ -22,46 +24,46 @@
           </div>
           <div class="col-8 ">
             <div class="row" style="margin-top:30px">
-              <button type="submit" class="col-3 button btn-primary" onclick="checkGuess()">Submit</button>
-              <h1 class="text-center" style="color:grey">LETTERS</h1>
-              <button type="submit" class="col-3 button btn-danger" onclick="clearGuess()">Clear</button>
+              <button type="submit" class="col-3 button btn-primary">Submit</button>
+              <h1 id="letter-container" class="text-center col-6" style="color:grey">LETTERS</h1>
+              <button type="submit" class="col-3 button btn-danger">Clear</button>
             </div>
-            <div class="flex-center">
+            <div class="flex-center" style="margin-top:30px">
                <div class="row">
                   <ul class="flex-container flex-center">
-                    <li class="flex-item box box-disabled" id="0">0</li>
-                    <li class="flex-item box" id="1">1</li>
-                    <li class="flex-item box" id="2">2</li>
-                    <li class="flex-item box" id="3">3</li>
+                    <li class="flex-item box">0</li>
+                    <li class="flex-item box">1</li>
+                    <li class="flex-item box">2</li>
+                    <li class="flex-item box">3</li>
                   </ul>
                </div>
                <div class="row">
                   <ul class="flex-container flex-center">
-                  <li class="flex-item box" id="4">4</li>
-                  <li class="flex-item box" id="5">5</li>
-                  <li class="flex-item box" id="6">6</li>
-                  <li class="flex-item box" id="7">7</li>
+                  <li class="flex-item box">4</li>
+                  <li class="flex-item box">5</li>
+                  <li class="flex-item box">6</li>
+                  <li class="flex-item box">7</li>
                 </ul>
                </div>
                  <div class="row">
                   <ul class="flex-container flex-center">
-                    <li class="flex-item box" id="8">8</li>
-                    <li class="flex-item box" id="9">9</li>
-                    <li class="flex-item box" id="10">10</li>
-                    <li class="flex-item box" id="11">11</li>
+                    <li class="flex-item box">8</li>
+                    <li class="flex-item box">9</li>
+                    <li class="flex-item box">10</li>
+                    <li class="flex-item box">11</li>
                   </ul>
                </div>
                  <div class="row">
                   <ul class="flex-container flex-center">
-                    <li class="flex-item box" id="12">12</li>
-                    <li class="flex-item box" id="13">13</li>
-                    <li class="flex-item box" id="14">14</li>
-                    <li class="flex-item box" id="15">15</li>
+                    <li class="flex-item box">12</li>
+                    <li class="flex-item box">13</li>
+                    <li class="flex-item box">14</li>
+                    <li class="flex-item box">15</li>
                   </ul>
                </div>
         </div>
                <div class="text-center"><h3>Time Left: <span id="time-left">60</span></h3></div>
-                <div class="text-center"><button class="button color:black" id="clear" onclick="resetGame()">Reset Board</button></div>
+                <div class="text-center"><button class="button btn-warning">Reset Board</button></div>
           </div>
       </div>
   </div>
