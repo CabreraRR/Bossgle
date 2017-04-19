@@ -12,6 +12,14 @@ function randomLetters() {
 function display_letters(){
   $('#letter-container').html(active_letters.join(''));
 }
+function update_score(add_me){
+  var $score = $('#totalScore');
+  $score.html(parseInt($score.html())+add_me);
+}
+function update_word_count(){
+  var $count = $('#wordCount');
+  $count.html(word_list.length);
+}
 
 $(function(){
   $('.flex-item.box').on('click', function(e){
@@ -30,34 +38,26 @@ $(function(){
     letters.push(letter);
     $this.html(letter);
   });
-});
 
-for(var i=0;i<$('.flex-item').length;i++){
-  item = $('.flex-item')[i];
-}
-
-$(function(){
-  $('.btn-danger').on('click', function (e){
-    if($(this).hasClass('box-disabled')) return;
-    active_letters.length = 0;
+  $('.btn-danger').on('click', function(){
+    active_letters = [];
     display_letters();
-    console.log (active_letters);
-  })
-});
+  });
 
-//$(function(){
-//  $('.btn-warning').on('click', functiontion (e)){
-//
-//});
-
-$(function(){
-  $('btn-primary').on('click', function (e){
-    var word = active_letters.join('')
-//    if($(this).hasClass('box-disabled')) return;
-    if (isBasicWord(word)) {
+  $('.btn-primary').on('click', function (e){
+    var word = active_letters.join('').toLowerCase();
+    console.log(word, isBasicWord(word));
+    if(isBasicWord(word)){
+      active_letters=[];
+      display_letters();
       word_list.push(word);
-      console.log(word_list)
+      var score = 9*word.length;
+      var new_items = $('<div class="col-7">'+word+'</div><div class="col-5">'+score+'</div>');
+      $('#current-words').prepend(new_items);
+      update_score(score);
+      update_word_count();
     }
     
   });
+
 });
