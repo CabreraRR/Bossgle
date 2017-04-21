@@ -1,55 +1,41 @@
+html,
+body {
+  height: 100%;
+}
 
-    html,body{
-        height:100%;
-    }
-    .main{
-        flex:1 1 80%;
-        height:100%;
-    }
+.main {
+  flex: 1 1 80%;
+  height: 100%;
+}
+
 .flex-container {
-
   object-position: center;
   list-style: none;
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
 }
+
 .flex-item {
   background: grey;
   padding: 5px;
-  width: 100px;
-  height: 100px;
-  border-color: darkorange;
-  border-width: thick;
-  border: solid;
+  width: 75px;
+  height: 75px;
+  border-color: orange;
+  border-width: 3px;
+  border-style: solid;
   margin: 10px;
-  line-height: 80px;
+  line-height: 60px;
   color: white;
   font-weight: bold;
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
 }
-  .flex-center {
-    justify-content: center;
-  }
-/*
-  .button {
-  display: inline-block;
-  padding: 15px 25px;
-    margin: auto;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  border: none;
-  }
-  .button:hover {background-color: grey}
 
-.button:active {
-  background-color: white;
-*/
+.flex-center {
+  justify-content: center;
+}
+
 .button {
   display: inline-block;
   padding: 15px 25px;
@@ -64,25 +50,27 @@
   box-shadow: 0 9px #999;
 }
 
-/*.button:hover {background-color: lightgray}*/
-
 .button:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
-}
-  .box:hover {
-    background-color: skyblue;
-    color: darkorange;
-  }
-  .box:active {
-    background-color: orange;
-    color: white;
-  }
-  .box-disabled {
-    background-color: skyblue;
-    color: orange;
-    cursor: not-allowed;
-@import "compass/css3";
 
+}
+.box:active {
+  background-color: orange;
+  color: white;
+}
+.box-disabled {
+  background-color: orange;
+  color: white;
+  border-style: solid;
+  border-width: 3px;
+  border-color: grey;
+  cursor: not-allowed;
+}
+.btn-disabled {
+  background-color: grey;
+  cursor: not-allowed;
+  color: black;
+}
